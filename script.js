@@ -12,31 +12,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener('DOMContentLoaded', (event) => {
     if(window.location.pathname.includes('recipes.html')) {
-    setTimeout(function() {
-        document.body.innerHTML += `
-        <div class="popup-overlay">
-            <div class="popup-content">
-            <h2>Join the OliaRosa Mailing List!</h2>
-            <p>Sign up to receive more recipes, hear about our farm and receive exclusive offers!</p>
-            <form id="emailSignup">
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                <button type="submit">Sign Up</button>
-            </form>
-            <button class="close-popup">X Close</button>
-            </div>
-        </div>
-        `;
-        document.querySelector('.close-popup').addEventListener('click', function() {
-        document.querySelector('.popup-overlay').style.display = 'none';
-        });
-        document.getElementById('emailSignup').addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Here, you would normally handle the form submission, like sending data to your server
-        alert('Thank you for signing up! We cant wait to share more about OliaRosa with you!');
-        document.querySelector('.popup-overlay').style.display = 'none';
-        });
-    }, 10000); // 10 seconds
-}
+      setTimeout(function() {
+          document.body.innerHTML += `
+          <div class="popup-overlay">
+              <div class="popup-content">
+              <h2>Join the OliaRosa Mailing List!</h2>
+              <p>Sign up to receive more recipes, hear about our farm and receive exclusive offers!</p>
+              <form id="emailSignup">
+                  <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                  <button type="submit">Sign Up</button>
+              </form>
+              <button class="close-popup">X Close</button>
+              </div>
+          </div>
+          `;
+          document.querySelector('.close-popup').addEventListener('click', function() {
+          document.querySelector('.popup-overlay').style.display = 'none';
+          });
+          document.getElementById('emailSignup').addEventListener('submit', function(e) {
+          e.preventDefault();
+          // Here, you would normally handle the form submission, like sending data to your server
+          alert('Thank you for signing up! We cant wait to share more about OliaRosa with you!');
+          document.querySelector('.popup-overlay').style.display = 'none';
+          });
+      }, 10000); // 10 seconds
+    }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
